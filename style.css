@@ -1,190 +1,111 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Usando uma fonte de estilo pixel/sistema, ou similar */
-body, button {
-    font-family: 'Courier New', Courier, monospace; /* Alternativa de sistema para estilo pixel */
-    background-color: #e0e0e0; /* Fundo cinza claro padrão */
-}
-
-/* --- Container Principal da Página --- */
-.page-container {
+body {
+    background-color: #e2e8f0;
+    color: #333;
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-/* --- Cabeçalho --- */
 .header {
-    background-color: #5c8ca6; /* Azul-acinzentado do topo */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid rgba(0,0,0,0.2);
-}
-
-/* --- Área de Postagens (Grid) --- */
-.main-content {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-    gap: 30px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- Cartões de Postagem --- */
-.post-card {
-    background-color: #ffe0e0; /* Fundo rosado claro */
-    border: 3px solid #f99; /* Borda rosa mais escura */
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* --- Conteúdo interno dos cartões --- */
-.post-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.post-content h3 {
-    font-size: 1.5rem;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.post-content .author {
-    color: #e85a5a; /* Vermelho-rosado do autor */
-    margin-bottom: 15px;
-    font-style: italic;
-}
-
-.post-content p {
-    margin-bottom: 20px;
-}
-
-.post-content .source {
-    margin-top: auto; /* Empurra a fonte para o final */
-    font-size: 0.9rem;
-    text-decoration: none;
-    display: inline-block; /* Mantém o underline do link */
-}
-
-.post-content .source a {
-    color: #000;
-    text-decoration: underline;
-}
-
-/* --- Ícone do Logo Pixelado --- */
-.pixel-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px; /* Mantém o espaço para o ícone */
-}
-
-/* Se você não tiver a imagem, isso desenha um placeholder quadrado */
-.pixel-icon img {
-    border: 1px solid #ccc;
-    background-color: #fff;
-}
-
-/* --- Seção de Curtidas --- */
-.likes {
+    background-color: #5c788a;
+    color: #ffffff;
+    width: 60%;
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    color: #e85a5a; /* Cor do coração e texto */
-}
-
-.like-count {
-    border: 1px solid #f99;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-/* --- Rodapé --- */
-.footer {
-    padding: 30px;
+    padding: 25px 20px;
     text-align: center;
-    background-color: #f0f0f0;
-    border-top: 2px solid rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Espaço entre o botão e os canos */
-}
-
-/* --- Botão "Tema Escuro" --- */
-.theme-button {
-    background-color: #fff;
-    color: #000;
-    border: 3px solid #ccc; /* Borda pixelada */
-    padding: 10px 25px;
     border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+.header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
-.theme-button:hover {
-    background-color: #eee;
-    border-color: #aaa;
-}
-
-/* --- Seção dos Canos Azuis --- */
-.pipe-links-container {
+main.container {
+    width: 80%;
+    max-width: 900px;
+    margin-top: 30px;
     display: flex;
-    justify-content: center;
-    gap: 15px; /* Espaço entre os canos */
+    flex-direction: row; /* Alinha os posts horizontalmente */
+    flex-wrap: wrap; /* Permite que os posts quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui o espaço entre os posts */
+    gap: 20px; /* Espaçamento entre os posts */
+}
+
+.post {
+    display: flex;
+    flex-direction: column; /* Conteúdo do post alinhado verticalmente */
+    align-items: center;
+    border: 1px solid #183C63;
+    padding: 16px;
+    width: 30%; /* Largura fixa para cada post */
+    min-width: 250px; /* Largura mínima para evitar posts muito estreitos */
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-icon img {
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    text-align: center;
     width: 100%;
 }
 
-/* Estilizando os links como "canos" */
-.pipe-link {
-    width: 30px; /* Largura do cano */
-    height: 80px; /* Altura do cano */
-    background-color: #4da6ff; /* Azul vibrante dos canos */
-    border: 3px solid #3a7dbd; /* Borda azul mais escura */
-    border-radius: 4px; /* Cantos levemente arredondados */
-    display: block;
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+.post-content h2 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 8px;
 }
 
-/* Efeito de hover para os canos */
-.pipe-link:hover {
-    transform: scale(1.1); /* Aumenta levemente */
-    box-shadow: 0 5px 15px rgba(77, 166, 255, 0.4); /* Brilho azul */
+.post-content .author {
+    font-size: 0.85rem;
+    color: #CF1010;
+    margin-bottom: 12px;
 }
 
-/* Adicionando o "rebordo" superior do cano */
-.pipe-link::after {
-    content: '';
-    position: absolute;
-    top: -8px; /* Ajuste para sobrepor o topo */
-    left: -3px; /* Alinha com a borda externa */
-    right: -3px; /* Alinha com a borda externa */
-    height: 15px;
-    background-color: #7accff; /* Azul mais claro para o rebordo */
-    border: 3px solid #3a7dbd;
-    border-radius: 3px;
-    pointer-events: none; /* Não captura cliques */
+.post-content .text {
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.post-content .artigo-fonte {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.like-btn {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    color: #475569;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.like-btn .heart {
+    color: #e11d48;
+}
+.like-btn:hover {
+    background-color: #e2e8f0;
 }
