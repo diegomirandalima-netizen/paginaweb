@@ -1,113 +1,46 @@
-body {
-    background-color: #e2e8f0;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+header {
+  background: #183C63;
+  color: #ffffff;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 5px solid #cf1010;
+  padding: 16px;
+  font-family: "Jersey 10", sans-serif;
 }
-
-.header {
-    background-color: #5c788a;
-    color: #ffffff;
-    width: 60%;
-    margin-top: 20px;
-    padding: 25px 20px;
-    text-align: center;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+main {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  color: #183C63;
+  text-align: center;
+  max-width: 800px;
+  margin-top: 16px 0 auto;
+  font-family: "Jersey 10", sans-serif;
+  margin: 0 auto;
 }
-.header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
+img {
+    width: 80px;
+    height: 80px;
 }
-.header p {
-    font-size: 0.9rem;
-    opacity: 0.9;
+.artigo-autor {
+  color: #cf1010;
 }
-
-main.container {
-    width: 80%;
-    max-width: 900px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row; /* Alinha os posts horizontalmente */
-    flex-wrap: wrap; /* Permite que os posts quebrem para a próxima linha */
-    justify-content: space-between; /* Distribui o espaço entre os posts */
-    gap: 20px; /* Espaçamento entre os posts */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #183c63;
+  margin: 16px;
+  gap: 16px;
+  padding: 16px;
+  flex: 1 1 25%;
 }
-
-.post {
-    display: flex;
-    flex-direction: column; /* Conteúdo do post alinhado verticalmente */
-    align-items: center;
-    border: 1px solid #183C63;
-    padding: 16px;
-    width: 30%; /* Largura fixa para cada post */
-    min-width: 250px; /* Largura mínima para evitar posts muito estreitos */
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.post-icon img {
-    width: 65px;
-    height: 65px;
-    border-radius: 6px;
-    object-fit: cover;
-    border: 1px solid #cbd5e1;
-    margin-bottom: 10px;
-}
-
-.post-content {
-    text-align: center;
-    width: 100%;
-}
-
-.post-content h2 {
-    font-size: 1.2rem;
-    color: #1e293b;
-    margin-bottom: 8px;
-}
-
-.post-content .author {
-    font-size: 0.85rem;
-    color: #CF1010;
-    margin-bottom: 12px;
-}
-
-.post-content .text {
-    font-size: 0.95rem;
-    color: #334155;
-    margin-bottom: 12px;
-    line-height: 1.4;
-}
-
-.post-content .artigo-fonte {
-    font-size: 0.85rem;
-    color: #64748b;
-    margin-bottom: 12px;
-}
-
-.like-btn {
-    background-color: #f1f5f9;
-    border: 1px solid #cbd5e1;
-    border-radius: 4px;
-    padding: 4px 10px;
-    font-size: 0.85rem;
-    color: #475569;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.like-btn .heart {
-    color: #e11d48;
-}
-.like-btn:hover {
-    background-color: #e2e8f0;
+.tema-escuro {
+  background: #151428;
+  color: #ffffff;
 }
 
 
