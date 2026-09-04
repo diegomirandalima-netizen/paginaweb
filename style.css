@@ -94,12 +94,11 @@ body {
 .btn-tema-escuro {
     position: fixed;
     bottom: 16px;
-    right: 16px;
-    font-size: 32px;
-    padding: 12px;
-    background-color: #183c63;
-    border-radius: 10%;
-    border: none;
-    cursor: pz;
-
+    right: 16px; 
+    font-size: 24px; 
+    padding: 12px;   
+    background-color: #CCCCCC;
+    border-radius: 10%; 
+    border: none; 
+    cursor: pointer;
 }
